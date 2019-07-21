@@ -1,0 +1,273 @@
+.reports-page {
+  color: #999;
+  background: #EEE;
+  font-size: 1.2em;
+}
+
+.report-filters {
+  border: none;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+  padding: 20px 0;
+}
+
+/******************/
+/* REPORT HEADER  */
+/******************/
+
+.reports-page header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.reports-page h1 {
+  color: #4B5B60;
+  margin-bottom: 0;
+}
+
+.report-actions button {
+  width: 100px;
+  padding: 5px 0;
+  border-radius: 5px;
+  height: 37px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.report-actions button:first-of-type {
+  margin-right: 10px;
+}
+
+.new-report {
+  background: #35CC67;
+  color:  #fff;
+}
+
+
+.export-to {
+  background: #fff;
+  color: #548CAA;
+}
+
+.filter-hide {
+  color: #199cd8;
+}
+
+.filter-hide-reset div i {
+  margin: 0 7px 0 0;
+}
+
+.filter-hide-reset div:first-child {
+  margin: 0 30px 0 0;
+}
+
+
+/******************/
+/*  REPORT ROWS   */
+/******************/
+
+
+.report-row {
+  display: flex;
+  align-items: center;
+}
+
+.report-row.filter-hide-reset {
+  height: 50px;
+}
+
+.report-row.report-date-row {
+  height: 50px;
+}
+
+.report-row.report-search-row {
+  height: 50px;
+}
+
+.report-row.report-checkbox-row {
+  height: 50px;
+}
+
+.report-row > i {
+  margin: 0 7px 0 0;
+  font-size: 1.4em;
+  color: #73787c;
+}
+
+/******************/
+/* REPORT SEARCH ROW  */
+/******************/
+
+.search-field {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.search-field input, 
+.search-field button {
+  height: 30px;
+  margin: 0;
+}
+
+.search-field input {
+  padding: 1px 1px 1px 5px;
+}
+
+.search-field button {
+  text-align: center;
+}
+
+.search-field button i {
+  text-align: center;
+}
+
+
+
+/*************************/
+/* REPORT CHECKBOX ROW  */
+/************************/
+
+
+.filter-checkbox {
+  margin: 0 14px 0 0;
+  padding: 5px 10px;
+  height: 36px;
+  display: inline-block;
+  border-radius: 18px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.filter-checkbox * {
+  cursor: pointer;
+}
+
+.filter-checkbox:hover,
+.filter-checkbox:focus,
+.filter-checkbox:active {
+  opacity: 1;
+}
+
+
+.filter-checkbox input {
+  margin: 0 5px 0 0;
+}
+
+.filter-checkbox > input {
+  margin: 0 5px 0 0;
+}
+
+.filter-checkbox label {
+  width: 110px;
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+}
+
+
+
+.filter-open {
+  background: #199cd8;
+}
+
+.filter-processing {
+  background: #0f6986;
+}
+
+.filter-approved {
+  background: #33b567;
+}
+
+.filter-reimbursed {
+  background: #295232;
+}
+
+.filter-closed {
+  background: #bbb;
+  color: #4B5B60;
+}
+
+
+
+/*************************/
+/* MONTHLY STATEMENT TABLE  */
+/************************/
+
+.monthly-statement-grid {
+  display: grid;
+  height: auto;
+  padding: 20px;
+  align-items: center;
+  grid-template-columns: 20px 2fr 1fr 1fr 1fr 1fr;
+}
+
+.monthly-statement-summary {
+  background: #fff;
+  border-radius: 20px;
+}
+
+.monthly-statement-summary-total {
+  text-align: right;
+}
+
+.monthly-statement-grid > div {
+  margin-right: 10px;
+}
+
+.monthly-statement-grid > div:last-child {
+  margin: 0;
+}
+.monthly-statement-grid > div > i {
+  margin-right: 5px;
+}
+
+.monthly-statement-header {
+  margin: 20px 0 0;
+  padding: 20px;
+}
+
+.monthly-statement-summary .monthly-statement-summary-total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.monthly-statement-summary-total div {
+  padding: 3px;
+  border-radius: 18px;
+  width: 106px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  opacity: 0.8;
+}
+
+.monthly-statement-summary-total .open {
+  background: #199cd8;
+}
+
+.monthly-statement-summary-total .processing {
+  background: #0f6986;
+}
+
+.monthly-statement-summary-total .approved {
+  background: #33b567;
+}
+
+.monthly-statement-summary-total .reimbursed {
+  background: #295232;
+}
+
+.monthly-statement-summary-total .closed {
+  background: #bbb;
+  color: #4B5B60;
+}
+
+
+

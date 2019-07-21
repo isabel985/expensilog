@@ -1,0 +1,93 @@
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../node_modules/bootstrap-daterangepicker/daterangepicker.css';
+
+/**************************/
+/*    RESET STYLES        */
+/**************************/
+
+@import './styles/reset.css';
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/**************************/
+/*    MAIN STYLES         */
+/**************************/
+
+main {
+  margin: 0;
+  padding: 20px;
+  background: #eaeaea;
+  position: absolute;
+  top: 0;
+  left: 280px;
+  height: 100%;
+  width: calc(100% - 280px);
+  min-width: calc(1150px - 280px);
+}
+  
+aside.side-nav {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 280px;
+}
+
+.date-range {
+  text-align: center;
+}
+
+.date-range-label {
+  margin-right: 10px;
+}
+
+
+/*************************/
+/*       PAGINATION     */
+/************************/
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination div {
+  margin: 0 20px 0 0;
+}
+
+.pagination button {
+  padding: 5px 13px;
+  font-size: 1.3em;
+  border-radius: 3px;
+}

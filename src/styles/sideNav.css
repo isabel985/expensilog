@@ -1,0 +1,46 @@
+aside.side-nav {
+    margin: 0;
+    padding: 0;
+    background: rgb(75, 83, 90);
+    background: linear-gradient(90deg, rgba(75, 83, 90, 1) 0%, rgba(42, 53, 60, 1) 62%);
+    color: #fff;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.side-nav li {
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.side-nav a {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.side-nav li a:hover,
+.side-nav li a:focus,
+.side-nav li a:active {
+    background: #6c7682;
+}
+
+.side-nav a.active {
+    background: #555e69;
+}
+
+.side-nav li i {
+    padding-right: 14px;
+}
