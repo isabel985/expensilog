@@ -29,12 +29,16 @@ aside.side-nav {
     padding: 0 20px;
     display: flex;
     align-items: center;
+    color: #fff;
+    text-decoration: none;
 }
 
 .side-nav li a:hover,
 .side-nav li a:focus,
 .side-nav li a:active {
     background: #6c7682;
+    color: #fff;
+    text-decoration: none;
 }
 
 .side-nav a.active {

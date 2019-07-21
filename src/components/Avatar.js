@@ -5,7 +5,7 @@ const Avatar = () => {
   return (
     <div className="avatar">
       {true
-        ? <i class="fas fa-user-circle"></i>
+        ? <i className="fas fa-user-circle"></i>
         : <img src="http://placeimg.com/100/100/people" alt=""></img>
       }
       <p>Danielle</p>
