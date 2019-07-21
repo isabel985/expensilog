@@ -1,0 +1,82 @@
+.wrap-collapsible {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.wrap-collapsible label {
+  border-bottom: 1px solid #d4d4d4;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.wrap-collapsible .label-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.wrap-collapsible .label-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.wrap-collapsible label > i {
+  font-size: 1.7em;
+  margin-right: 15px;
+}
+
+.wrap-collapsible label h3,
+.wrap-collapsible label p {
+  margin: 0;
+}
+
+.wrap-collapsible input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+  padding: 1em 1.5em;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.lbl-toggle .rotate-arrow i {
+  transform: rotate(0deg);
+  transition: transform .1s linear;
+  font-size: 1.3em;
+}
+
+.toggle:checked + .lbl-toggle .rotate-arrow i {
+  transform: rotate(180deg);
+  transition: transform .1s linear;
+}
+
+.collapsible-content .content-inner {
+  background:#fff;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: 1em 1.5em;
+}
+

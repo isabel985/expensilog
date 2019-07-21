@@ -4,7 +4,9 @@ import '../../styles/pages.css';
 const Settings = () => {
   return (
     <main>
-      <h1>Settings</h1>
+      <header>
+        <h1>Settings</h1>
+      </header>
     </main>
   );
 }

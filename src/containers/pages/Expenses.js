@@ -4,7 +4,9 @@ import '../../styles/pages.css';
 const Expenses = () => {
   return (
     <main>
-      <h1>Expenses</h1>
+      <header>
+        <h1>Expenses</h1>
+      </header>
     </main>
   );
 }
