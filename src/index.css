@@ -31,6 +31,16 @@ body {
   color: #999;
 }
 
+div#root {
+  height: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 280px auto;
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -50,14 +60,12 @@ main {
   margin: 0;
   padding: 0;
   background: #eaeaea;
-  position: absolute;
-  top: 0;
-  left: 280px;
   height: 100%;
-  width: calc(100% - 280px);
   min-width: calc(1150px - 280px);
   font-size: 1.2em;
   color: #999;
+  display: grid;
+  grid-template-rows: 77px auto;
 }
 
 main header {
@@ -75,13 +83,6 @@ main header h1 {
   font-size: 2em;
 }
 
-aside.side-nav {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  width: 280px;
-}
-
 .date-range {
   text-align: center;
 }
@@ -89,7 +90,6 @@ aside.side-nav {
 .date-range-label {
   margin-right: 10px;
 }
-
 
 /**************************/
 /*    CONTENT WRAPPERS    */
@@ -102,13 +102,11 @@ aside.side-nav {
 .leftSideBar-and-content-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
-  height: 100%;
 }
 
 .rightSideBar-and-content-wrapper {
   display: grid;
   grid-template-columns: 1fr auto;
-  height: 100%;
 }
 
 /*************************/
@@ -219,7 +217,6 @@ aside.side-nav {
 .modal .form-control select {
   height: 30px;
 }
-
 
 .modal .form-control input:not([type="checkbox"]), 
 .modal .form-control select {
