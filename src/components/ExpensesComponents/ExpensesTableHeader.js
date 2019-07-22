@@ -17,7 +17,7 @@ const ExpensesTableHeader = () => {
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>
-        Category
+        Department
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>

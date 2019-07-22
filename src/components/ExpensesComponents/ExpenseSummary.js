@@ -17,7 +17,7 @@ const ExpenseSummary = () => {
         $1.99
       </div>
       <div id=''>
-        Travel
+        Marketing
       </div>
       <div id=''>
         Add Description

@@ -12,3 +12,8 @@
   height: 25px;
   overflow: hidden;
 }
+
+.modal-content {
+  width: 530px;
+  left: calc(50% - 235px);
+}

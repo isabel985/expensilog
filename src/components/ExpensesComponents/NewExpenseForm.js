@@ -1,15 +1,10 @@
 import React from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 
-const NewReportForm = () => {
+const NewExpenseForm = () => {
   return (
     <React.Fragment>
-      <h2>Create New Report</h2>
-
-      <div className='form-control'>
-        <label>Merchant</label>
-        <input id='merchant' type='text' />
-      </div>
+      <h2>Create New Expense</h2>
 
       <div className='form-control'>
         <label>Date</label>
@@ -22,8 +17,13 @@ const NewReportForm = () => {
       </div>
 
       <div className='form-control'>
-        <label>Total</label>
-        <input id='total' type='text' />
+        <label>Merchant</label>
+        <input id='merchant' type='text' />
+      </div>
+
+      <div className='form-control'>
+        <label>Amount</label>
+        <input id='amount' type='text' />
       </div>
 
       <div className='form-control billable'>
@@ -41,6 +41,11 @@ const NewReportForm = () => {
       </div>
 
       <div className='form-control'>
+        <label>Description</label>
+        <input id='description' type='text' />
+      </div>
+
+      <div className='form-control'>
         <label>Customer</label>
         <select>
           <option>Customer A</option>
@@ -54,20 +59,6 @@ const NewReportForm = () => {
         <input type='text' />
       </div>
 
-      <div className='form-control'>
-        <label>Description</label>
-        <input type='text' />
-      </div>
-
-      <div className='form-control'>
-        <label>Report</label>
-        <select>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-        </select>
-      </div>
-
       <div className='form-control action-buttons'>
         <button>Cancel</button>
         <button>Save</button>
@@ -77,4 +68,4 @@ const NewReportForm = () => {
   );
 }
 
-export default NewReportForm;
+export default NewExpenseForm;
