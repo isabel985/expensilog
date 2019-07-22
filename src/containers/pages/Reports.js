@@ -16,8 +16,10 @@ const Reports = () => {
         <h1>Reports</h1>
         <ReportActions />
       </header>
-      <ReportFilters />
-      <MonthlyStatementsTable />
+      <div className='content-wrapper'>
+        <ReportFilters />
+        <MonthlyStatementsTable />
+      </div>
     </main>
   );
 }

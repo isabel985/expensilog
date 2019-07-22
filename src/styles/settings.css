@@ -1,0 +1,4 @@
+.secondary-side-nav + aside {
+  /* specify width at component level ensures smoother transition when expanding nav */
+  width: 200px;
+}

@@ -12,10 +12,12 @@ const Inbox = () => {
       <header>
         <h1>Inbox</h1>
       </header>
-      <Alert />
-      <InvalidReport />
-      <Notification />
-      <OverdueReport />
+      <div className='content-wrapper'>
+        <Alert />
+        <InvalidReport />
+        <Notification />
+        <OverdueReport />
+      </div>
     </main>
   );
 }

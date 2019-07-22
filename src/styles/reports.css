@@ -5,7 +5,8 @@
 .report-filters {
   border: none;
   border-bottom: 1px solid #d4d4d4;
-  padding: 0 0 20px;
+  margin: 20px 0;
+  padding: 0;
 }
 
 /******************/
@@ -67,6 +68,7 @@
 .report-row {
   display: flex;
   align-items: center;
+  padding: 0  0 20px;
 }
 
 .report-row.filter-hide-reset {
@@ -196,6 +198,7 @@
 .monthly-statement-grid {
   display: grid;
   height: auto;
+  margin: 0;
   padding: 20px;
   align-items: center;
   grid-template-columns: 20px 2fr 1fr 1fr 1fr 1fr;
@@ -222,8 +225,8 @@
 }
 
 .monthly-statement-header {
-  margin: 20px 0 0;
-  padding: 20px;
+  margin: 20px;
+  padding: 0;
 }
 
 .monthly-statement-summary .monthly-statement-summary-total {
