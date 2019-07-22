@@ -2,3 +2,16 @@
   /* specify width at component level ensures smoother transition when expanding nav */
   width: 200px;
 }
+
+.your-details-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.card-content.change-password-content .form-control label {
+  width: 175px;
+}
+
+.change-password-content button {
+  width: 130px;
+}

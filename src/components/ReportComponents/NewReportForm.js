@@ -24,7 +24,7 @@ const NewReport = () => {
 
       <div className='form-control'>
         <label>Total</label>
-        <input type='text' />
+        <input id='total' type='text' />
       </div>
 
       <div className='form-control billable'>

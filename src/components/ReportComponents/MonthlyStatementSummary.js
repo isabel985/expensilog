@@ -2,7 +2,7 @@ import React from 'react';
 
 const MonthlyStatementSummary = () => {
   return (
-    <div className='monthly-statement-grid monthly-statement-summary'>
+    <div className='large-table large-table-summary monthly-statement-grid'>
       <div id=''>
         <input type='checkbox' />
       </div>
@@ -10,7 +10,7 @@ const MonthlyStatementSummary = () => {
         Monthly Statement Report - Danielle Quevedo - June
       </div>
       <div id='' className='monthly-statement-summary-total'>
-        <div class='approved'>Approved</div>
+        <div class='status-label approved'>Approved</div>
         $1,234.00
       </div>
       <div id=''>

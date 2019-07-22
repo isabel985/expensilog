@@ -5,7 +5,7 @@ import Modal from '../../components/Modal';
 import ReportActions from '../../components/ReportComponents/ReportActions';
 import ReportFilters from '../../components/ReportComponents/ReportFilters';
 import MonthlyStatementsTable from '../../components/ReportComponents/MonthlyStatementsTable';
-import NewReport from '../../components/ReportComponents/NewReport';
+import NewReport from '../../components/ReportComponents/NewReportForm';
 
 
 const Reports = () => {

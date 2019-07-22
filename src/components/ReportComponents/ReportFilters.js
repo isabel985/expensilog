@@ -42,27 +42,27 @@ const ReportFilters = () => {
 
       <div className='report-row report-checkbox-row'>
         <i class="fas fa-file"></i>
-        <div className="filter-checkbox filter-open">
+        <div className="filter-checkbox open">
           <input type='checkbox' id='checkOpen' />
           <label htmlFor='checkOpen'>Open</label>
         </div>
 
-        <div className="filter-checkbox filter-processing">
+        <div className="filter-checkbox processing">
           <input type='checkbox' id='checkProcessing' />
           <label htmlFor='checkProcessing'>Processing</label>
         </div>
 
-        <div className="filter-checkbox filter-approved">
+        <div className="filter-checkbox approved">
           <input type='checkbox' id='checkApproved' />
           <label htmlFor='checkApproved'>Approved</label>
         </div>
 
-        <div className="filter-checkbox filter-reimbursed">
+        <div className="filter-checkbox reimbursed">
           <input type='checkbox' id='checkReimbursed' />
           <label htmlFor='checkReimbursed'>Reimbursed</label>
         </div>
 
-        <div className="filter-checkbox filter-closed">
+        <div className="filter-checkbox closed">
           <input type='checkbox' id='checkClosed' />
           <label htmlFor='checkClosed'>Closed</label>
         </div>

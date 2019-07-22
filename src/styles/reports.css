@@ -13,28 +13,8 @@
 /* REPORT HEADER  */
 /******************/
 
-.report-actions button {
-  width: 100px;
-  padding: 5px 0;
-  border-radius: 5px;
-  height: 37px;
-  cursor: pointer;
-  font-weight: 700;
-}
-
 .report-actions button:first-of-type {
   margin-right: 10px;
-}
-
-.new-report-button {
-  background: #35CC67;
-  color:  #fff;
-}
-
-
-.export-report-button {
-  background: #fff;
-  color: #548CAA;
 }
 
 .filter-hide {
@@ -167,45 +147,15 @@
 }
 
 
-
-.filter-open {
-  background: #199cd8;
-}
-
-.filter-processing {
-  background: #0f6986;
-}
-
-.filter-approved {
-  background: #33b567;
-}
-
-.filter-reimbursed {
-  background: #295232;
-}
-
-.filter-closed {
-  background: #bbb;
-  color: #4B5B60;
-}
-
-
-
 /*************************/
 /* MONTHLY STATEMENT TABLE  */
 /************************/
 
 .monthly-statement-grid {
-  display: grid;
-  height: auto;
-  margin: 0;
-  padding: 20px;
-  align-items: center;
   grid-template-columns: 20px 2fr 1fr 1fr 1fr 1fr;
 }
 
-.monthly-statement-summary {
-  background: #fff;
+.large-table-summary {
   border-radius: 20px;
 }
 
@@ -213,59 +163,15 @@
   text-align: right;
 }
 
-.monthly-statement-grid > div {
-  margin-right: 10px;
-}
-
-.monthly-statement-grid > div:last-child {
-  margin: 0;
-}
-.monthly-statement-grid > div > i {
-  margin-right: 5px;
-}
-
-.monthly-statement-header {
-  margin: 20px;
-  padding: 0;
-}
-
-.monthly-statement-summary .monthly-statement-summary-total {
+.large-table .monthly-statement-summary-total {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.monthly-statement-summary-total div {
-  padding: 3px;
-  border-radius: 18px;
-  width: 106px;
-  text-align: center;
-  color: #fff;
-  font-weight: bold;
-  float: right;
-  opacity: 0.8;
-}
 
-.monthly-statement-summary-total .open {
-  background: #199cd8;
-}
 
-.monthly-statement-summary-total .processing {
-  background: #0f6986;
-}
 
-.monthly-statement-summary-total .approved {
-  background: #33b567;
-}
-
-.monthly-statement-summary-total .reimbursed {
-  background: #295232;
-}
-
-.monthly-statement-summary-total .closed {
-  background: #bbb;
-  color: #4B5B60;
-}
 
 
 
