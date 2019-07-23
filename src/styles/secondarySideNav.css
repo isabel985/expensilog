@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-.content-wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  height: 100%;
-}
-
-.secondary-side-nav + aside {
-  border-right: 1px solid #d4d4d4;
-  width: 200px;
-  transition: width .2s linear;
-}
-
-.secondary-side-nav {
-  display:  none;
-}
-
-.secondary-side-nav + aside .rotate-arrow i {
-  cursor: pointer;
-  margin: 15px 20px 0 0;
-  padding: 7px;
-=======
 .secondary-side-nav + aside {
   border-right: 1px solid #d4d4d4;
   width: auto; /* specify width within individual page styles e.g. settings.css */
@@ -30,15 +8,11 @@
 
 .secondary-side-nav {
   display: none;
->>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1
 }
 
 .secondary-side-nav + aside .rotate-arrow {
   text-align: right;
   width: 100%;
-<<<<<<< HEAD
-  margin-bottom: 15px;
-=======
   margin-bottom: 20px;
   cursor: pointer;
 }
@@ -46,41 +20,10 @@
 .secondary-side-nav + aside .rotate-arrow i {
   margin: 15px 20px 0 0;
   padding: 7px;
->>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1
 }
 
 .secondary-side-nav + aside nav ul {
   list-style-type: none;
-<<<<<<< HEAD
-  padding: 0 15px;
-}
-
-.secondary-side-nav + aside nav ul li {
-  margin-bottom: 15px;
-  display: flex;
-  align-content: center;
-}
-
-.secondary-side-nav + aside nav ul li i {
-  font-size: 1.5em;
-  margin-right: 10px;
-}
-
-.secondary-side-nav:checked + aside {
-  width: 68px; 
-  transition: width .2s linear;
-}
-
-.secondary-side-nav:checked + aside .rotate-arrow i {
-  transform: rotate(180deg);
-  transition: transform .1s linear;
-}
-
-.secondary-side-nav:checked + aside nav ul li span {
-  display: none; 
-}
-
-=======
   padding: 0px 16px;
 }
 
@@ -133,4 +76,3 @@
   transform: rotate(180deg);
   transition: transform .1s linear;
 }
->>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1
