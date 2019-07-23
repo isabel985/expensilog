@@ -1,14 +1,14 @@
 import React from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 
-const NewReport = () => {
+const NewReportForm = () => {
   return (
-    <div className='modal-content-wrapper new-report'>
+    <React.Fragment>
       <h2>Create New Report</h2>
 
       <div className='form-control'>
         <label>Merchant</label>
-        <input type='text' />
+        <input id='merchant' type='text' />
       </div>
 
       <div className='form-control'>
@@ -21,10 +21,9 @@ const NewReport = () => {
         </DateRangePicker>
       </div>
 
-
       <div className='form-control'>
         <label>Total</label>
-        <input type='text' />
+        <input id='total' type='text' />
       </div>
 
       <div className='form-control billable'>
@@ -74,8 +73,8 @@ const NewReport = () => {
         <button>Save</button>
       </div>
 
-    </div>
+    </React.Fragment>
   );
 }
 
-export default NewReport;
+export default NewReportForm;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .content-wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -18,16 +19,39 @@
   cursor: pointer;
   margin: 15px 20px 0 0;
   padding: 7px;
+=======
+.secondary-side-nav + aside {
+  border-right: 1px solid #d4d4d4;
+  width: auto; /* specify width within individual page styles e.g. settings.css */
+  min-width: 200px;
+  transition: all .3s linear;
+  background: #eaeaea;
+}
+
+.secondary-side-nav {
+  display: none;
+>>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1
 }
 
 .secondary-side-nav + aside .rotate-arrow {
   text-align: right;
   width: 100%;
+<<<<<<< HEAD
   margin-bottom: 15px;
+=======
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.secondary-side-nav + aside .rotate-arrow i {
+  margin: 15px 20px 0 0;
+  padding: 7px;
+>>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1
 }
 
 .secondary-side-nav + aside nav ul {
   list-style-type: none;
+<<<<<<< HEAD
   padding: 0 15px;
 }
 
@@ -56,3 +80,57 @@
   display: none; 
 }
 
+=======
+  padding: 0px 16px;
+}
+
+.secondary-side-nav + aside nav ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.secondary-side-nav + aside nav ul li span {
+  opacity:1;
+  height: 25px;
+  width: auto;
+  transition: all .3s linear .15s;
+  overflow: hidden;
+} 
+
+.secondary-side-nav + aside nav ul li i {
+  font-size: 1.5em;
+  margin-right: 10px;
+  background: none;
+  transition: all .1s linear;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.secondary-side-nav:checked + aside {
+  width: 80px;
+  min-width: 80px;
+  transition: all .3s linear;
+  background: #ccc;
+}
+
+.secondary-side-nav:checked + aside nav ul li span {
+  opacity:0;
+  height: 0;
+  width: 0;
+  transition: opacity 1s linear .15s;
+  transition: width 1s linear .15s;
+  transition: height 1s linear 1.15s;
+  overflow: hidden;
+}
+
+.secondary-side-nav:checked + aside nav ul li i {
+  background: #eaeaea;
+  transition: all .2s linear;
+}
+
+.secondary-side-nav:checked + aside .rotate-arrow i {
+  transform: rotate(180deg);
+  transition: transform .1s linear;
+}
+>>>>>>> ce05be0a958b7e211551e05ea629af0a240945a1

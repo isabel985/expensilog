@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MonthlyStatementsPagination = () => {
+const Pagination = () => {
   return (
     <div className='pagination'>
       <div>Page 1 of 4</div>
@@ -10,4 +10,4 @@ const MonthlyStatementsPagination = () => {
   );
 }
 
-export default MonthlyStatementsPagination;
+export default Pagination;

@@ -31,6 +31,16 @@ body {
   color: #999;
 }
 
+div#root {
+  height: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 280px auto;
+  height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -48,38 +58,29 @@ a {
 
 main {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   background: #eaeaea;
-  position: absolute;
-  top: 0;
-  left: 280px;
   height: 100%;
-  width: calc(100% - 280px);
   min-width: calc(1150px - 280px);
   font-size: 1.2em;
   color: #999;
+  /* display: grid; */
+  /* grid-template-rows: 77px auto; */
 }
 
 main header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
+  margin: 0;
+  padding: 20px;
   border-bottom: 1px solid #d4d4d4;
-  margin-bottom: 0;
 }
 
 main header h1 {
   color: #4B5B60;
-  margin-bottom: 0;
+  margin: 0;
   font-size: 2em;
-}
-
-aside.side-nav {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  width: 280px;
 }
 
 .date-range {
@@ -90,24 +91,87 @@ aside.side-nav {
   margin-right: 10px;
 }
 
+/**************************/
+/*    CONTENT WRAPPERS    */
+/**************************/
+
+.content-wrapper {
+  margin: 20px;
+}
+
+.leftSideBar-and-content-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.rightSideBar-and-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 
 /*************************/
-/*       PAGINATION     */
+/*       FORM STYLES    */
 /************************/
 
-.pagination {
+.form-control {
+  display: flex;
+  justify-content: flex-start;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 10px;
+  align-items: center;
+  height: auto;
+}
+
+.form-control input, 
+.form-control select {
+  height: 30px;
+}
+
+.form-control input:not([type="checkbox"]), 
+.form-control select {
+  border-radius: 5px;
+  width: 250px;
+}
+
+.form-control label:first-child,
+.form-control input:first-child {
+  margin-right: 10px;
+}
+
+.form-control label:first-child {
+  width: 70px;
+  text-align: right;
+}
+
+.card .form-actions {
   display: flex;
   justify-content: flex-end;
+  margin: 20px 0 0;
 }
 
-.pagination div {
-  margin: 0 20px 0 0;
+/**************************/
+/*    CARD STYLES         */
+/**************************/
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  margin: 0 0 20px;
 }
 
-.pagination button {
-  padding: 5px 13px;
-  font-size: 1.3em;
-  border-radius: 3px;
+.card h3 {
+  margin: 0 0 20px;
+}
+
+.card, 
+.modal-content-wrapper {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 15px;
 }
 
 /*************************/
@@ -132,10 +196,10 @@ aside.side-nav {
 .modal-content {
   position: relative;
   
-  max-width: 800px;
-  top: calc(50% - 60px);
+  /* max-width: 800px; */
+  top: 40px;
   bottom: 0;
-  left: calc(50% - 400px);
+  /* left: calc(50% - 400px); */
   height: auto;
   
   padding: 3%;
@@ -154,33 +218,6 @@ aside.side-nav {
   padding: 0;
 }
 
-.modal-content-wrapper {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.30);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.30);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.30);
-  border-radius: 6px;
-  padding: 10px;
-}
-
-.modal .form-control {
-  display: flex;
-  justify-content: flex-start;
-  border: none;
-  box-shadow: none;
-  margin-bottom: 10px;
-  align-items: center;
-}
-
-.modal .form-control label:first-child,
-.modal .form-control input:first-child {
-  margin-right: 10px;
-}
-
-.modal .form-control label:first-child {
-  width: 100px;
-  text-align: right;
-}
-
 .modal .form-control.billable input {
   margin-left: 105px;
 }
@@ -193,14 +230,151 @@ aside.side-nav {
   margin-right: 20px;
 }
 
-.modal .form-control input, 
-.modal .form-control select {
-  height: 30px;
+/*************************/
+/*  LARGE TABLE STYLES  */
+/************************/
+
+.large-table {
+  margin: 0;
+  padding: 20px;
+  align-items: center;
+  display: grid;
+  height: auto;
 }
 
+.large-table-summary {
+  background: #fff;
+}
 
-.modal .form-control input:not([type="checkbox"]), 
-.modal .form-control select {
+.large-table > div {
+  margin-right: 10px;
+}
+
+.large-table > div:last-child {
+  margin: 0;
+}
+
+.large-table > div > i {
+  margin-right: 5px;
+}
+
+.large-table-header {
+  margin: 20px;
+  padding: 0;
+}
+
+/*************************/
+/*    SMALL TABLE STYLES  */
+/************************/
+
+.small-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid > span {
+  padding: 8px 4px;
+}
+
+.small-table span:nth-child(-n+3) {
+  background: #eaeaea;
+  border-bottom: 2px solid #d4d4d4;
+}
+
+.small-table span {
+  padding: 7px 14px;
+}
+
+/*************************/
+/*       PAGINATION     */
+/************************/
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination div {
+  margin-right: 20px;
+}
+
+.pagination button {
+  padding: 5px 13px;
+  font-size: 1.3em;
+  border-radius: 3px;
+}
+
+/************************/
+/*     BUTTON STYLES    */
+/************************/
+
+.btn {
+  width: 100px;
+  padding: 5px 0;
   border-radius: 5px;
-  width: 250px;
+  height: 37px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-action-1 {
+  background: #35CC67;
+  color:  #fff;
+  opacity: .8;
+}
+
+.btn-action-2 {
+  background: #fff;
+  color: #548CAA;
+  border: 1px solid #548CAA;
+}
+
+.btn-save {
+  border: 1px solid #35CC67;
+  color:  #35CC67;
+  background: #fff;
+}
+
+.btn-action-1:hover,
+.btn-action-1:active,
+.btn-action-1:focus {
+  opacity: 1;
+  color: #fff;
+}
+
+/**************************/
+/*  STATUS LABEL STYLES   */
+/**************************/
+
+.status-label {
+  padding: 3px;
+  border-radius: 18px;
+  width: 106px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.open {
+  background: #199cd8;
+}
+
+.processing {
+  background: #0f6986;
+}
+
+.approved {
+  background: #33b567;
+}
+
+.reimbursed {
+  background: #295232;
+}
+
+.closed {
+  background: #bbb;
+  color: #4B5B60;
 }

@@ -1,8 +1,9 @@
 aside.side-nav {
     margin: 0;
     padding: 0;
+    width: 280px;
     background: rgb(75, 83, 90);
-    background: linear-gradient(90deg, rgba(75, 83, 90, 1) 0%, rgba(42, 53, 60, 1) 62%);
+    background: linear-gradient(90deg, #4b535a 0%, rgba(42, 53, 60, 1) 62%);
     color: #fff;
     font-size: 1.3em;
     display: flex;

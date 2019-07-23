@@ -5,7 +5,9 @@ const Modal = (props) => {
   return (
     <div className='modal'>
       <div className='modal-content'>
-        {props.children}
+        <div className='modal-content-wrapper'>
+          {props.children}
+        </div>
       </div>
     </div>
   );

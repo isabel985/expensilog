@@ -1,33 +1,30 @@
 import React from 'react';
 
-const MonthlyStatementsHeader = () => {
+const ExpensesTableHeader = () => {
   return (
-    <div className='large-table monthly-statement-header monthly-statement-grid'>
+    <div className='large-table expenses-grid'>
       <div id=''>
-        <input type='checkbox' />
+        <i class="fas fa-sort"></i>
+        Date
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>
-        Name
-      </div>
-      <div id='' className='monthly-statement-summary-total'>
-        <i class="fas fa-sort"></i>
-        Total
+        Merchant
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>
-        From
+        Amount
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>
-        To
+        Department
       </div>
       <div id=''>
         <i class="fas fa-sort"></i>
-        Submitted
+        Description
       </div>
     </div>
   );
 }
 
-export default MonthlyStatementsHeader;
+export default ExpensesTableHeader;

@@ -7,7 +7,8 @@ import '../styles/sideNav.css';
 const SideNav = () => {
   return (
     <aside className="side-nav">
-      <Avatar /><nav>
+      <Avatar />
+      <nav>
         <ul>
           <li><NavLink to='/inbox'><i className="fas fa-inbox"></i>Inbox</NavLink></li>
           <li><NavLink to='/expenses'><i class="fas fa-file-invoice-dollar"></i>Expenses</NavLink></li>

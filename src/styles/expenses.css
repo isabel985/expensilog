@@ -1,0 +1,19 @@
+.expenses-grid {
+  grid-template-columns: 60px 2fr 1fr 1fr 1fr;
+}
+
+.associated-report {
+  display: grid;
+  grid-template-columns: 118px calc(100% - 136px);
+  align-items: center;
+}
+
+.report-name {
+  height: 25px;
+  overflow: hidden;
+}
+
+.modal-content {
+  width: 530px;
+  left: calc(50% - 235px);
+}
