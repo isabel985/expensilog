@@ -7,11 +7,6 @@ const NewReportForm = () => {
       <h2>Create New Report</h2>
 
       <div className='form-control'>
-        <label>Merchant</label>
-        <input id='merchant' type='text' />
-      </div>
-
-      <div className='form-control'>
         <label>Date</label>
         <DateRangePicker startDate="1/1/2019" endDate="1/1/2019" singleDatePicker>
           <input id='dateRange' className='date-range'
@@ -59,14 +54,14 @@ const NewReportForm = () => {
         <input type='text' />
       </div>
 
-      <div className='form-control'>
+      {/* <div className='form-control'>
         <label>Report</label>
         <select>
           <option>May</option>
           <option>June</option>
           <option>July</option>
         </select>
-      </div>
+      </div> */}
 
       <div className='form-control action-buttons'>
         <button>Cancel</button>

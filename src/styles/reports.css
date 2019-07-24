@@ -10,7 +10,7 @@
 }
 
 /******************/
-/* REPORT HEADER  */
+/* REPORTS LIST HEADER  */
 /******************/
 
 .report-actions button:first-of-type {
@@ -41,7 +41,7 @@
 }
 
 /******************/
-/*  REPORT ROWS   */
+/*  REPORTS LIST ROWS   */
 /******************/
 
 
@@ -74,7 +74,7 @@
 }
 
 /******************/
-/* REPORT SEARCH ROW  */
+/* REPORTS LIST SEARCH ROW  */
 /******************/
 
 .search-field {
@@ -105,7 +105,7 @@
 
 
 /*************************/
-/* REPORT CHECKBOX ROW  */
+/* REPORTS LIST CHECKBOX ROW  */
 /************************/
 
 
@@ -148,7 +148,7 @@
 
 
 /*************************/
-/* MONTHLY STATEMENT TABLE  */
+/* REPORTS LIST MONTHLY STATEMENT TABLE  */
 /************************/
 
 .monthly-statement-grid {
@@ -171,13 +171,41 @@
 
 
 /*************************/
-/* MODAL  */
+/* REPORT FORM  */
 /************************/
 
-
-.modal-content {
-  width: 530px;
-  left: calc(50% - 235px);
+.content-wrapper.report-form-header {
+  border-bottom: 1px solid #d4d4d4;
+  margin: 0 0 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #d4d4d4;
 }
 
+.report-form {
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  padding: 0 0 20px;
+  border-bottom: 2px solid #d4d4d4;
+}
+
+.report-header .form-control {
+  width: auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.report-form .form-control select {
+  width: 100px;
+}
 

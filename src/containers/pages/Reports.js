@@ -1,25 +1,26 @@
-import React from 'react';
-import Modal from '../../components/Modal';
-import ReportActions from '../../components/ReportComponents/ReportActions';
-import ReportFilters from '../../components/ReportComponents/ReportFilters';
-import MonthlyStatementsTable from '../../components/ReportComponents/MonthlyStatementsTable';
-import NewReportForm from '../../components/ReportComponents/NewReportForm';
+import React, { useState } from 'react';
+
+import ReportsList from '../../components/ReportComponents/ReportsList';
+import ReportForm from '../../components/ReportComponents/ReportForm';
+
+import DragDrop from '../../components/ReportComponents/DragDrop';
+
 import '../../styles/pages.css';
 import '../../styles/reports.css';
 
-
 const Reports = () => {
+
+  const [formMode, setFormMode] = useState(false);
+
+  // 
+
   return (
     <main className='reports-page'>
-      <Modal><NewReportForm /></Modal>
-      <header>
-        <h1>Reports</h1>
-        <ReportActions />
-      </header>
-      <div className='content-wrapper'>
-        <ReportFilters />
-        <MonthlyStatementsTable />
-      </div>
+      { formMode 
+      ? <ReportsList />
+      : <ReportForm />
+      }
+      <DragDrop />
     </main>
   );
 }
