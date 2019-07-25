@@ -5,12 +5,15 @@ const DragDrop = () => {
   // set up local storage for unassigned expenses
   const [storedExpenses, setStoredExpenses] = useState(
     [
-      { id: '123', name: "Google Services", assignedStatus: "unassigned"},
-      { id: '456', name: "AWS", assignedStatus: "unassigned"},
-      { id: '789', name: "Apple", assignedStatus: "unassigned"}
+      { id: '123', name: "Google Services", assignedStatus: "unassigned" },
+      { id: '456', name: "AWS", assignedStatus: "unassigned" },
+      { id: '789', name: "Apple", assignedStatus: "unassigned" },
+      { id: '135', name: "Slack", assignedStatus: "unassigned" },
+      { id: '680', name: "Discount Tire", assignedStatus: "unassigned" }
     ]
   );
 
+  // grab the id of the expense being dragged
   let onDragStart = (ev, id) => {
     console.log('dragstart:', id);
     ev.dataTransfer.setData("id", id);
@@ -41,34 +44,37 @@ const DragDrop = () => {
     unassigned: []
   }
 
-  storedExpenses.forEach((t) => {
-    expenses[t.assignedStatus].push(
-      <div key={t.name}
-        onDragStart={(e) => onDragStart(e, t.name)}
+  storedExpenses.forEach((expense) => {
+    expenses[expense.assignedStatus].push(
+      <div key={expense.name}
+        onDragStart={(e) => onDragStart(e, expense.name)}
         draggable
-        className="draggable"
+        className="draggable-expense"
       >
-        {t.name}
+        {expense.name}
       </div>
     );
   });
 
   return (
-    <div className="container-drag">
-      <h2 className="header">DRAG & DROP DEMO</h2>
-      <div className="wip"
+    <div className="drag-drop-wrapper">
+      <div className="drag-drop-box unassigned-expenses"
         onDragOver={(e) => onDragOver(e)}
         onDrop={(e) => { onDrop(e, "unassigned") }}>
-        <span className="task-header">UNASSIGNED</span>
-        {expenses.unassigned}
+        <div className='drag-drop-box-content'>
+          <span className="task-header">UNASSIGNED</span>
+          {expenses.unassigned}
+        </div>
       </div>
-      <div className="droppable"
+      <div className="drag-drop-box selected-expenses"
         onDragOver={(e) => onDragOver(e)}
         onDrop={(e) => onDrop(e, "assigned")}>
+        <div className='drag-drop-box-content'>
         <span className="task-header">ASSIGNED</span>
         {expenses.assigned}
       </div>
     </div>
+    </div >
   );
 }
 

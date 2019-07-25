@@ -389,18 +389,37 @@ main header h1 {
 /*  Drag and Drop Stuff   */
 /**************************/
 
-.wip {
-  height: 100px;
-  background: orange;
+
+.drag-drop-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
 }
 
-.droppable {
-  height: 200px;
-  background: green;
+.drag-drop-box {
+  background: #eaeaea;
+  height: 280px;
+  overflow-y: scroll;
 }
 
-.draggable {
-  background: pink;
+.drag-drop-box-content {
+  height: 101%;
+}
+
+.draggable-expense {
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
   margin: 10px;
   padding: 10px;
 }
+
+.unassigned-expenses{
+
+}
+
+
+.selected-expenses {
+
+}
+
