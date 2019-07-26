@@ -1,7 +1,20 @@
 import React from 'react';
 import DragDrop from '../../components/ReportComponents/DragDrop';
+import Avatar from '../Avatar';
+import { userInfo } from 'os';
 
 const ReportForm = () => {
+
+  let user = {
+    id: '432345',
+    name: 'Jennifer',
+    avatarImg: 'jennifer.png',
+    supervisor: {
+      id: '98723',
+      name: 'Steve',
+      avatarImg: 'steve.png',
+    }
+  };
 
   return (
     <React.Fragment>
@@ -18,7 +31,12 @@ const ReportForm = () => {
         <div className='report-form'>
 
           <div className='report-header'>
-            <div className='status-label open'>Open</div>
+            <div className='status-id-wrapper'>
+              <div className='status-label open'>Open</div>
+              <div className='report-id'><span>ID:</span>89349845</div>
+
+            </div>
+
             <div className='form-control'>
               <label>Report</label>
               <select>
@@ -29,25 +47,20 @@ const ReportForm = () => {
             </div>
           </div>
 
-          {/* 
-          each report has:
-          - id          
-          - status label
+          <div className='report-header'>
+            <div className='report-name'>Expense Report May 2019</div>
+          </div>
 
-          - name
-          - From
-          - To
-          - list of expenses 
-          - total $ amount
-
-          - Submitted Date 
-          "post-review" items: 
-          - rejected status
-          - reimbursable amount
-          - non-reimbursable amount
-          */}
-
-          <DragDrop />
+          <div>
+            <div>
+              <DragDrop>
+                <div className='report-from-to'>
+                  <div className=''><Avatar img={user.avatarImg} />From: <span>{user.name}</span></div>
+                  <div className=''><Avatar img={user.supervisor.avatarImg} />To: <span>{user.supervisor.name}</span></div>
+                </div>
+              </DragDrop>
+            </div>
+          </div>
         </div>
 
       </div>

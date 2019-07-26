@@ -10,7 +10,7 @@ const MonthlyStatementSummary = () => {
         Monthly Statement Report - Danielle Quevedo - June
       </div>
       <div id='' className='monthly-statement-summary-total'>
-        <div class='status-label approved'>Approved</div>
+        <div className='status-label approved'>Approved</div>
         $1,234.00
       </div>
       <div id=''>

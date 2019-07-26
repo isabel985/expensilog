@@ -8,7 +8,7 @@ const SecondarySideNav = props => {
       <aside>
 
         <label htmlFor='secondarySideNavCollapse' className='rotate-arrow'>
-          <i class="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-left"></i>
         </label>
         {props.children}
       </aside>
