@@ -9,7 +9,7 @@ const ExpenseSummary = () => {
       <div id=''>
         <div className='merchant-name'>Google Services</div>
         <div className='associated-report'>
-          <div class='status-label approved'>Approved</div>
+          <div className='status-label approved'>Approved</div>
           <div className='report-name'>Monthly Statement Report - Danielle Quevedo - June</div>
         </div>
       </div>

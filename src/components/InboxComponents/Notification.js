@@ -12,7 +12,7 @@ const Notification = () => {
             <p>This is a notification statement.</p>
           </div>
           <div className='rotate-arrow'>
-            <i class="fas fa-chevron-down"></i>
+            <i className="fas fa-chevron-down"></i>
           </div>
         </div>
       </label>

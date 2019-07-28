@@ -5,12 +5,12 @@ const ReportFilters = () => {
   return (
     <div className='report-filters'>
       <div className='report-row filter-hide-reset'>
-        <div className='filter-hide'><i class="fas fa-sliders-h"></i>Hide Filters</div>
-        <div className='filter-reset'><i class="fas fa-undo-alt"></i>Reset</div>
+        <div className='filter-hide'><i className="fas fa-sliders-h"></i>Hide Filters</div>
+        <div className='filter-reset'><i className="fas fa-undo-alt"></i>Reset</div>
       </div>
 
       <div className='report-row report-date-row'>
-        <i class="far fa-calendar-alt"></i>
+        <i className="far fa-calendar-alt"></i>
         <label className='date-range-label'>Date Range:</label>
         <DateRangePicker startDate="1/1/2019" endDate="3/1/2019">
           <input id='dateRange' className='date-range'
@@ -21,14 +21,14 @@ const ReportFilters = () => {
       </div>
 
       <div className='report-row report-search-row'>
-        <i class="fas fa-search"></i>
+        <i className="fas fa-search"></i>
         <div className='search-field'>
           <input
             type='text'
             placeholder='Search'
           />
           <button type='submit'>
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
         </div>
 
@@ -41,7 +41,7 @@ const ReportFilters = () => {
       </div>
 
       <div className='report-row report-checkbox-row'>
-        <i class="fas fa-file"></i>
+        <i className="fas fa-file"></i>
         <div className="filter-checkbox open">
           <input type='checkbox' id='checkOpen' />
           <label htmlFor='checkOpen'>Open</label>
@@ -70,14 +70,14 @@ const ReportFilters = () => {
 
       <template>
         
-        <i class="fas fa-undo-alt"></i>
-        <i class="fas fa-sort-up"></i>
-        <i class="fas fa-sort-down"></i>
+        <i className="fas fa-undo-alt"></i>
+        <i className="fas fa-sort-up"></i>
+        <i className="fas fa-sort-down"></i>
 
 
-        <i class="fas fa-sort-amount-down-alt"></i>
-        <i class="fas fa-sort-amount-up"></i>
-        <i class="fas fa-sort-amount-down"></i>
+        <i className="fas fa-sort-amount-down-alt"></i>
+        <i className="fas fa-sort-amount-up"></i>
+        <i className="fas fa-sort-amount-down"></i>
         </template>
 
     </div>
