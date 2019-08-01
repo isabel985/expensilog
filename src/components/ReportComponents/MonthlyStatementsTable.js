@@ -3,11 +3,11 @@ import MonthlyStatementsHeader from './MonthlyStatementsHeader';
 import MonthlyStatementSummary from './MonthlyStatementSummary';
 import MonthlyStatementsPagination from '../Pagination';
 
-const MonthlyStatementsTable = () => {
+const MonthlyStatementsTable = (props) => {
   return (
     <React.Fragment>
       <MonthlyStatementsHeader />
-      <MonthlyStatementSummary />
+      <MonthlyStatementSummary onReportClick={props.onReportClick} />
       <MonthlyStatementsPagination />
     </React.Fragment>
   );

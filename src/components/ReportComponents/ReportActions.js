@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ReportActions = () => {
+const ReportActions = ({newReportClick}) => {
   return (
     <div className='report-actions'>
-      <button id='newReportButton' className='btn btn-action-1'>New Report</button>
+      <button id='newReportButton' className='btn btn-action-1' onClick={newReportClick} >New Report</button>
     </div>
   );
 }

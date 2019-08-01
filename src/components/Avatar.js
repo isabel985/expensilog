@@ -5,7 +5,7 @@ const Avatar = ({ img, name }) => {
   return (
     <div className="avatar">
       {img
-        ? <img src={`~/src/images/jennifer.png`} alt=""></img>
+        ? <img src={`/images/${img}`} alt=""></img>
         : <i className="fas fa-user-circle"></i>
       }
       {name && <p>{name}</p>}
