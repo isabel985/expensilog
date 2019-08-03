@@ -5,6 +5,7 @@ import Expenses from './containers/pages/Expenses';
 import Inbox from './containers/pages/Inbox';
 import Reports from './containers/pages/Reports';
 import Settings from './containers/pages/Settings';
+import Grandparent from './components/Grandparent';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/expenses" component={Expenses} />
       <Route path="/reports" component={Reports} />
       <Route path="/settings" component={Settings} />
+      <Route path="/grandparent" component={Grandparent} />
     </div>
   );
 }

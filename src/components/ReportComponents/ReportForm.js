@@ -5,9 +5,20 @@ import Avatar from '../Avatar';
 
 const ReportForm = (props) => {
   console.log(props);
-  
+
   let monthOptions = props.availableMonths.map(month => <option>{month}</option>);
-  
+
+  const selectBox = '';
+  if (props.newForm) {
+    selectBox = <div className='form-control'>
+      <label>Report</label>
+      <select onChange={props.handleOnDateChange}>
+        <option>Select Date</option>
+        {monthOptions}
+      </select>
+    </div>
+  }
+
   return (
     <>
       <header>
@@ -29,13 +40,8 @@ const ReportForm = (props) => {
 
             </div>
 
-            <div className='form-control'>
-              <label>Report</label>
-              <select onChange={props.handleOnDateChange}>
-                <option>Select Date</option>
-                {monthOptions}
-              </select>
-            </div>
+            {selectBox}
+
           </div>
 
           <div className='report-header'>

@@ -25,9 +25,12 @@ const Reports = () => {
     setName(selectedDate);
   }
 
+  const newForm = false;
+
   const onReportClick = (id) => {
     console.log('onReportClick was called');
     console.log('id is ', id);
+    // only need to find statement when report is clicked
     let foundStatement = statements.find(statement => statement.id === id)
     // if found statement
     if (foundStatement) {
@@ -37,8 +40,10 @@ const Reports = () => {
       setName(foundStatement.name);
       status = foundStatement.status;
       setFormMode(true);
+    } else {
+      alert('no statement found');
+      newForm = true;
     }
-    alert('no statement found');
   }
 
   const newReportClick = () => {
@@ -57,6 +62,7 @@ const Reports = () => {
           status={status}
           availableMonths={availableMonths}
           handleOnDateChange={handleOnDateChange}
+          newForm={newForm}
         />
         : <ReportsList
           onReportClick={onReportClick}
