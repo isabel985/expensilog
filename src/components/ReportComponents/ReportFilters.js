@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
+import { ReportContext } from '../../containers/pages/ReportContext';
+import ReportFilter from './ReportFilter';
 
 const ReportFilters = () => {
+  const { state, dispatch } = useContext(ReportContext);
+
   return (
     <div className='report-filters'>
       <div className='report-row filter-hide-reset'>
@@ -32,7 +36,6 @@ const ReportFilters = () => {
           </button>
         </div>
 
-
         <select>
           <option>All Submitters</option>
           <option>One</option>
@@ -42,10 +45,18 @@ const ReportFilters = () => {
 
       <div className='report-row report-checkbox-row'>
         <i className="fas fa-file"></i>
-        <div className="filter-checkbox open">
-          <input type='checkbox' id='checkOpen' />
+
+        <ReportFilter
+          id='checkOpen'
+          type='open'
+          onClick={() => { dispatch({ type: 'filter', payload: 'open' }) }}>
+          Open
+        </ReportFilter>
+
+        {/* <div className="filter-checkbox open">
+          <input type='checkbox' id='checkOpen' onClick={() => { dispatch({ type: 'filter', payload: 'open' }) }} />
           <label htmlFor='checkOpen'>Open</label>
-        </div>
+        </div> */}
 
         <div className="filter-checkbox processing">
           <input type='checkbox' id='checkProcessing' />
@@ -69,7 +80,7 @@ const ReportFilters = () => {
       </div>
 
       <template>
-        
+
         <i className="fas fa-undo-alt"></i>
         <i className="fas fa-sort-up"></i>
         <i className="fas fa-sort-down"></i>
@@ -78,7 +89,7 @@ const ReportFilters = () => {
         <i className="fas fa-sort-amount-down-alt"></i>
         <i className="fas fa-sort-amount-up"></i>
         <i className="fas fa-sort-amount-down"></i>
-        </template>
+      </template>
 
     </div>
   );

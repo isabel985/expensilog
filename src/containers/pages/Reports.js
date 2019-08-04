@@ -1,14 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { user, statements } from '../../utils/data';
 import ReportsList from '../../components/ReportComponents/ReportsList';
 import ReportForm from '../../components/ReportComponents/ReportForm';
 import '../../styles/pages.css';
 import '../../styles/reports.css';
+import { ReportContext, ContextProvider } from './ReportContext';
 
-const Reports = () => {
-  const [formMode, setFormMode] = useState(false);
-  const [formId, setFormId] = useState(Math.floor(Math.random() * 20));
-  const [name, setName] = useState('');
+const ReportsContainer = () => {
+  const { state, dispatch } = useContext(ReportContext);
+
+  // const [formMode, setFormMode] = useState(false);
+  // const [formId, setFormId] = useState(Math.floor(Math.random() * 20));
+  // const [name, setName] = useState('');
+
+  // const onReportClick = () => {
+  //   console.log('onReportClick was called');
+  //   console.log('id is ', reportState.selectedReportId);
+  //   // only need to find statement when report is clicked
+  //   let foundStatement = statements.find(statement => statement.id === reportState.selectedReportId)
+  //   // if found statement
+  //   if (foundStatement) {
+  //     // override the default variables 
+  //     console.log('foundStatement is', foundStatement);
+  //     setFormId(foundStatement.id);
+  //     setName(foundStatement.name);
+  //     status = foundStatement.status;
+  //     setFormMode(true);
+  //   } else {
+  //     alert('no statement found');
+  //     // newForm = true;
+  //   }
+  // }
+
+  // const newReportClick = () => {
+  //   setFormMode(true);
+  //   console.log("newReportClick was called");
+  // }
+
   // useEffect(()=>{},[name]);
   let status = 'open';
 
@@ -22,55 +50,31 @@ const Reports = () => {
   // change title when date is selected
   const handleOnDateChange = ev => {
     let selectedDate = ev.target.value;
-    setName(selectedDate);
-  }
-
-  const newForm = false;
-
-  const onReportClick = (id) => {
-    console.log('onReportClick was called');
-    console.log('id is ', id);
-    // only need to find statement when report is clicked
-    let foundStatement = statements.find(statement => statement.id === id)
-    // if found statement
-    if (foundStatement) {
-      // override the default variables 
-      console.log('foundStatement is', foundStatement);
-      setFormId(foundStatement.id);
-      setName(foundStatement.name);
-      status = foundStatement.status;
-      setFormMode(true);
-    } else {
-      alert('no statement found');
-      newForm = true;
-    }
-  }
-
-  const newReportClick = () => {
-    setFormMode(true);
-    console.log("newReportClick was called");
+    // setName(selectedDate);
   }
 
   return (
+
     <main className='reports-page'>
-      {formMode
+      {state.formMode
         ? <ReportForm
-          id={formId}
-          setName={setName}
-          name={name}
-          user={user}
-          status={status}
           availableMonths={availableMonths}
           handleOnDateChange={handleOnDateChange}
-          newForm={newForm}
+        // newForm={newForm}
         />
         : <ReportsList
-          onReportClick={onReportClick}
-          newReportClick={newReportClick}
+          onReportClick={() => { }}
+          newReportClick={() => { }}
         />
       }
     </main>
+
   );
 }
-
+const Reports = () => {
+  return (
+    <ContextProvider>
+      <ReportsContainer></ReportsContainer>
+    </ContextProvider>)
+}
 export default Reports;

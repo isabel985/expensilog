@@ -1,14 +1,20 @@
-import React from 'react';
-import {user, statements} from '../../utils/data';
+import React, { useContext } from 'react';
+// import {user, statements} from '../../utils/data';
+import { ReportContext } from '../../containers/pages/ReportContext';
 
 const MonthlyStatementSummary = (props) => {
-  
+  const { state, dispatch } = useContext(ReportContext);
+
+  const onReportClick = (id) => {
+    dispatch({type: 'statementSelected', payload: id})
+  }
+
   let displaySummary = (statement) => {
     return (
       <div 
         key={statement.id} 
         className='large-table large-table-summary monthly-statement-grid' 
-        onClick={() => props.onReportClick(statement.id)}>
+        onClick={() => onReportClick(statement.id)}>
       <div id=''>
         <input type='checkbox' />
       </div>
@@ -32,7 +38,7 @@ const MonthlyStatementSummary = (props) => {
     )
   };
 
-  return statements.map(displaySummary);
+  return state.statements.map(displaySummary);
 }
 
 export default MonthlyStatementSummary;

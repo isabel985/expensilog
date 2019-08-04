@@ -27,5 +27,32 @@ export const statements = [
     from: user.name,
     to: user.supervisor.name,
     date: 'Sept 10, 2019',
-  }
+  },
+  {
+    id: '789',
+    name: 'August 2019',
+    status: 'processing',
+    amount: 678,
+    from: user.name,
+    to: user.supervisor.name,
+    date: 'Sept 10, 2019',
+  },
+  {
+    id: '223',
+    name: 'July 2019',
+    status: 'reimbursed',
+    amount: 5678,
+    from: user.name,
+    to: user.supervisor.name,
+    date: 'Sept 10, 2019',
+  },
+  {
+    id: '898',
+    name: 'July 2019',
+    status: 'closed',
+    amount: 5678,
+    from: user.name,
+    to: user.supervisor.name,
+    date: 'Sept 10, 2019',
+  },
 ]

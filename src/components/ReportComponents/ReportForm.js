@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DragDrop from '../../components/ReportComponents/DragDrop';
 import Avatar from '../Avatar';
 // import { userInfo } from 'os';
+import { ReportContext } from '../../containers/pages/ReportContext';
 
 const ReportForm = (props) => {
-  console.log(props);
+  const { state, dispatch } = useContext(ReportContext);
 
   let monthOptions = props.availableMonths.map(month => <option>{month}</option>);
 
@@ -52,8 +53,8 @@ const ReportForm = (props) => {
             <div>
               <DragDrop>
                 <div className='report-from-to'>
-                  <div className=''><Avatar img={props.user.avatarImg} />From: <span>{props.user.name}</span></div>
-                  <div className=''><Avatar img={props.user.supervisor.avatarImg} />To: <span>{props.user.supervisor.name}</span></div>
+                  <div className=''><Avatar img={state.user.avatarImg} />From: <span>{state.user.name}</span></div>
+                  <div className=''><Avatar img={state.user.supervisor.avatarImg} />To: <span>{state.user.supervisor.name}</span></div>
                 </div>
               </DragDrop>
             </div>

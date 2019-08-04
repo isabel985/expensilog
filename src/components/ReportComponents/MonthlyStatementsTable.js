@@ -7,7 +7,7 @@ const MonthlyStatementsTable = (props) => {
   return (
     <React.Fragment>
       <MonthlyStatementsHeader />
-      <MonthlyStatementSummary onReportClick={props.onReportClick} />
+      <MonthlyStatementSummary />
       <MonthlyStatementsPagination />
     </React.Fragment>
   );
