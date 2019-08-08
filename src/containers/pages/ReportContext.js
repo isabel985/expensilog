@@ -6,6 +6,7 @@ let ReportContext = createContext();
 
 const initialState = {
   selectedFilters: [],
+  selectedStatements: [],
   statements,
   user,
   newForm: false,
@@ -15,11 +16,42 @@ const initialState = {
   statementSelected: {},
 }
 
+let populateSelectedStatements = (state) => {
+  // grab selectedStatements from state
+  let { selectedStatements, selectedFilters, statements } = state;
+
+  let newSelectedStatements = [];
+
+  selectedFilters.forEach((aFilter) => {
+    statements.forEach((aStatement) => {
+      if (aStatement.status === aFilter) {
+        newSelectedStatements.push(aStatement);
+      }
+    })
+  })
+  return newSelectedStatements;
+}
+
 let reducer = (state, action) => {
   switch (action.type) {
     case "filter":
-      console.log('inside reducer filter action');
-      return { ...state, selectedFilters: [...state.selectedFilters, action.payload] };
+      let newSelectedFilters = null;
+
+      // if action.type is in selectedFilters then we want to remove 
+      if (state.selectedFilters.includes(action.payload)) {
+        // filter over selectedFilters and make sure it is not equal to action.payload
+        newSelectedFilters = state.selectedFilters.filter(aFilter => action.payload !== aFilter)
+      } else {
+        // adding action.payload to state.selectedFilters
+        newSelectedFilters = [...state.selectedFilters, action.payload]
+      }
+
+      let newState = { ...state, selectedFilters: newSelectedFilters };
+      let newSelectedStatements = populateSelectedStatements(newState);
+
+      // make newSelectedFilters the state for selectedFilters
+      return { ...state, selectedFilters: newSelectedFilters, selectedStatements: newSelectedStatements }
+
     case "statementSelected":
       return { ...state, formMode: true, statementSelected: statements.find((statement) => statement.id === action.payload) }
     default:

@@ -53,30 +53,33 @@ const ReportFilters = () => {
           Open
         </ReportFilter>
 
-        {/* <div className="filter-checkbox open">
-          <input type='checkbox' id='checkOpen' onClick={() => { dispatch({ type: 'filter', payload: 'open' }) }} />
-          <label htmlFor='checkOpen'>Open</label>
-        </div> */}
+        <ReportFilter
+          id='checkProcessing'
+          type='processing'
+          onClick={() => { dispatch({ type: 'filter', payload: 'processing' }) }}>
+          Processing
+        </ReportFilter>
 
-        <div className="filter-checkbox processing">
-          <input type='checkbox' id='checkProcessing' />
-          <label htmlFor='checkProcessing'>Processing</label>
-        </div>
+        <ReportFilter
+          id='checkApproved'
+          type='approved'
+          onClick={() => { dispatch({ type: 'filter', payload: 'approved' }) }}>
+          Approved
+        </ReportFilter>
 
-        <div className="filter-checkbox approved">
-          <input type='checkbox' id='checkApproved' />
-          <label htmlFor='checkApproved'>Approved</label>
-        </div>
+        <ReportFilter
+          id='checkReimbursed'
+          type='reimbursed'
+          onClick={() => { dispatch({ type: 'filter', payload: 'reimbursed' }) }}>
+          Reimbursed
+        </ReportFilter>
 
-        <div className="filter-checkbox reimbursed">
-          <input type='checkbox' id='checkReimbursed' />
-          <label htmlFor='checkReimbursed'>Reimbursed</label>
-        </div>
-
-        <div className="filter-checkbox closed">
-          <input type='checkbox' id='checkClosed' />
-          <label htmlFor='checkClosed'>Closed</label>
-        </div>
+        <ReportFilter
+          id='checkClosed'
+          type='closed'
+          onClick={() => { dispatch({ type: 'filter', payload: 'closed' }) }}>
+          Closed
+        </ReportFilter>
       </div>
 
       <template>
