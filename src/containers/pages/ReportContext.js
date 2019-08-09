@@ -17,8 +17,8 @@ const initialState = {
 }
 
 let populateSelectedStatements = (state) => {
-  // grab selectedStatements from state
-  let { selectedStatements, selectedFilters, statements } = state;
+  // grab selectedFilters and statements from state
+  let { selectedFilters, statements } = state;
 
   let newSelectedStatements = [];
 
@@ -35,14 +35,14 @@ let populateSelectedStatements = (state) => {
 let reducer = (state, action) => {
   switch (action.type) {
     case "filter":
-      let newSelectedFilters = null;
+      let newSelectedFilters = [];
 
-      // if action.type is in selectedFilters then we want to remove 
+      // if action.payload is in selectedFilters then we want to remove 
       if (state.selectedFilters.includes(action.payload)) {
         // filter over selectedFilters and make sure it is not equal to action.payload
         newSelectedFilters = state.selectedFilters.filter(aFilter => action.payload !== aFilter)
       } else {
-        // adding action.payload to state.selectedFilters
+        // adding action.payload to newSelectedFilters
         newSelectedFilters = [...state.selectedFilters, action.payload]
       }
 
