@@ -22,6 +22,9 @@ const ReportForm = (props) => {
 
   return (
     <>
+      <div className='origin'>
+        from ReportForm
+        </div>
       <header>
         <h1>Report Form</h1>
       </header>

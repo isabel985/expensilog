@@ -56,6 +56,9 @@ const ReportsContainer = () => {
   return (
 
     <main className='reports-page'>
+      <div className='origin'>
+        from Reports
+        </div>
       {state.formMode
         ? <ReportForm
           availableMonths={availableMonths}

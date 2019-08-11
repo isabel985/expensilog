@@ -3,6 +3,9 @@ import React from 'react';
 const MonthlyStatementsHeader = () => {
   return (
     <div className='large-table monthly-statement-header monthly-statement-grid'>
+      <div className='origin'>
+        from MonthlyStatementsHeader
+      </div>
       <div id=''>
         <input type='checkbox' />
       </div>

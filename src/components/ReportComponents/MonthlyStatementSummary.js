@@ -11,28 +11,32 @@ const MonthlyStatementSummary = (props) => {
 
   let displaySummary = (statement) => {
     return (
-      <div
-        key={statement.id}
-        className='large-table large-table-summary monthly-statement-grid'
-        onClick={() => onReportClick(statement.id)}>
-        <div id=''>
-          <input type='checkbox' />
+      <div key={statement.id}>
+        <div className='origin'>
+          from MonthlyStatementSummary
         </div>
-        <div id=''>
-          Monthly Statement Report - {statement.from} - {statement.name}
-        </div>
-        <div id='' className='monthly-statement-summary-total'>
-          <div className={`status-label ${statement.status}`}>{statement.status}</div>
-          ${statement.amount.toFixed(2)}
-        </div>
-        <div id=''>
-          {statement.from}
-        </div>
-        <div id=''>
-          {statement.to}
-        </div>
-        <div id=''>
-          {statement.date}
+        <div
+          className='large-table large-table-summary monthly-statement-grid'
+          onClick={() => onReportClick(statement.id)}>
+          <div id=''>
+            <input type='checkbox' />
+          </div>
+          <div id=''>
+            Monthly Statement Report - {statement.from} - {statement.name}
+          </div>
+          <div id='' className='monthly-statement-summary-total'>
+            <div className={`status-label ${statement.status}`}>{statement.status}</div>
+            ${statement.amount.toFixed(2)}
+          </div>
+          <div id=''>
+            {statement.from}
+          </div>
+          <div id=''>
+            {statement.to}
+          </div>
+          <div id=''>
+            {statement.date}
+          </div>
         </div>
       </div>
     )

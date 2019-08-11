@@ -425,4 +425,12 @@ main header h1 {
 
 }
 
+.origin {
+  font-size: 9px;
+  color:red;
+  display: none;
+}
 
+.hidden {
+  display: none;
+}

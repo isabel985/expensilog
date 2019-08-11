@@ -87,6 +87,9 @@ const DragDrop = props => {
 
   return (
     <div>
+      <div className='origin'>
+        from DragDrop
+        </div>
       <div className='drag-drop-wrapper'>
         {props.children}
 

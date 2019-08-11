@@ -6,6 +6,9 @@ import MonthlyStatementsPagination from '../Pagination';
 const MonthlyStatementsTable = (props) => {
   return (
     <React.Fragment>
+      <div className='origin'>
+        from MonthlyStatementsTable
+      </div>
       <MonthlyStatementsHeader />
       <MonthlyStatementSummary />
       <MonthlyStatementsPagination />
