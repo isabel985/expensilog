@@ -14,6 +14,17 @@ const initialState = {
   formId: null,
   formMode: false,
   statementSelected: {},
+  expenses: [
+    { id: '123', merchant: "Google Services", service: "AdWords", cost: 79.50, reimbursable: true, assignedStatus: "assigned", statementId: "123" },
+    { id: '456', merchant: "AWS", service: "Hosting", cost: 350.00, reimbursable: true, assignedStatus: "assigned", statementId: "456" },
+    { id: '789', merchant: "Apple", service: "Equipment", cost: 2567.89, reimbursable: false, assignedStatus: "assigned", statementId: "789" },
+    { id: '135', merchant: "Slack", service: "Instant Messaging", cost: 50.00, reimbursable: true, assignedStatus: "unassigned", statementId: "" },
+    { id: '680', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+    { id: '678', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+    { id: '985', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+    { id: '222', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+    { id: '501', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+  ]
 }
 
 let populateSelectedStatements = (state) => {
