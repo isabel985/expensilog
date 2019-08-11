@@ -54,6 +54,24 @@ let reducer = (state, action) => {
 
     case "statementSelected":
       return { ...state, formMode: true, statementSelected: statements.find((statement) => statement.id === action.payload) }
+    case "newReport":
+      let statementSelected = {
+        id: Math.floor(Math.random() * 9999999),
+        name: null,
+        status: 'open',
+        amount: 0,
+        from: user.name,
+        to: user.supervisor.name,
+        date: null,
+      }
+      return { ...state, formMode: true, statementSelected }
+    case "cancelReport":
+      return { ...state, formMode: false }
+    case "dateChange":
+      // grab the statementSelected into a new var then change the value of that new var
+      let newStatementSelected = state.statementSelected;
+      newStatementSelected.date = action.payload;
+      return { ...state, statementSelected: newStatementSelected }
     default:
       return { ...state };
   }

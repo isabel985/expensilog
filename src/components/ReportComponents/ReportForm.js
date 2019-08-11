@@ -9,11 +9,11 @@ const ReportForm = (props) => {
 
   let monthOptions = props.availableMonths.map(month => <option>{month}</option>);
 
-  const selectBox = '';
-  if (props.newForm) {
+  let selectBox = '';
+  if (!state.statementSelected.date) {
     selectBox = <div className='form-control'>
       <label>Report</label>
-      <select onChange={props.handleOnDateChange}>
+      <select onChange={(ev) => { dispatch({ type: 'dateChange', payload: ev.target.value }) }}>
         <option>Select Date</option>
         {monthOptions}
       </select>
@@ -29,7 +29,7 @@ const ReportForm = (props) => {
         <h1>Report Form</h1>
       </header>
       <div className='content-wrapper report-form-header'>
-        <button className='btn btn-cancel'>Cancel</button>
+        <button className='btn btn-cancel' onClick={() => { dispatch({ type: 'cancelReport' }) }}>Cancel</button>
         <button className='btn btn-save'>Save</button>
       </div>
 
@@ -39,8 +39,8 @@ const ReportForm = (props) => {
 
           <div className='report-header'>
             <div className='status-id-wrapper'>
-              <div className={`status-label status`}>{props.status}</div>
-              <div className='report-id'><span>ID:</span>{props.id}</div>
+              <div className={`status-label status`}>{state.statementSelected.status}</div>
+              <div className='report-id'><span>ID:</span>{state.statementSelected.id}</div>
 
             </div>
 
@@ -49,7 +49,7 @@ const ReportForm = (props) => {
           </div>
 
           <div className='report-header'>
-            <div className='report-name'>Expense Report {props.name}</div>
+            <div className='report-name'>Expense Report {state.statementSelected.date}</div>
           </div>
 
           <div>
