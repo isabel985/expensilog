@@ -5,8 +5,8 @@ import { user, statements } from '../../utils/data';
 let ReportContext = createContext();
 
 const initialState = {
-  selectedFilters: [],
-  selectedStatements: [],
+  selectedFilters: ['open', 'processing', 'approved', 'reimbursed', 'closed'],
+  selectedStatements: statements,
   statements,
   user,
   newForm: false,

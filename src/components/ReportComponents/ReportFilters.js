@@ -30,36 +30,6 @@ const ReportFilters = () => {
       </div>
 
       <div id='toggle'>
-        <div className='report-row report-date-row'>
-          <i className="far fa-calendar-alt"></i>
-          <label className='date-range-label'>Date Range:</label>
-          <DateRangePicker startDate="1/1/2019" endDate="3/1/2019">
-            <input id='dateRange' className='date-range'
-              value='01/01/19 - 03/01/19'
-              disabled
-            />
-          </DateRangePicker>
-        </div>
-
-        <div className='report-row report-search-row'>
-          <i className="fas fa-search"></i>
-          <div className='search-field'>
-            <input
-              type='text'
-              placeholder='Search'
-            />
-            <button type='submit'>
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
-
-          <select>
-            <option>All Submitters</option>
-            <option>One</option>
-            <option>Two</option>
-          </select>
-        </div>
-
         <div className='report-row report-checkbox-row'>
           <i className="fas fa-file"></i>
 
