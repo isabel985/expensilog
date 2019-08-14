@@ -15,15 +15,15 @@ const initialState = {
   formMode: false,
   statementSelected: {},
   expenses: [
-    { id: '123', merchant: "Google Services", service: "AdWords", cost: 79.50, reimbursable: true, assignedStatus: "assigned", statementId: "123" },
-    { id: '456', merchant: "AWS", service: "Hosting", cost: 350.00, reimbursable: true, assignedStatus: "assigned", statementId: "456" },
-    { id: '789', merchant: "Apple", service: "Equipment", cost: 2567.89, reimbursable: false, assignedStatus: "assigned", statementId: "789" },
-    { id: '135', merchant: "Slack", service: "Instant Messaging", cost: 50.00, reimbursable: true, assignedStatus: "unassigned", statementId: "" },
-    { id: '680', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
-    { id: '678', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
-    { id: '985', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
-    { id: '222', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
-    { id: '501', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, assignedStatus: "unassigned", statementId: "" },
+    { id: '726', merchant: "Google Services", service: "AdWords", cost: 79.50, reimbursable: true, statementId: "123" },
+    { id: '608', merchant: "AWS", service: "Hosting", cost: 350.00, reimbursable: true, statementId: "456" },
+    { id: '437', merchant: "Apple", service: "Equipment", cost: 2567.89, reimbursable: false, statementId: "789" },
+    { id: '135', merchant: "Slack", service: "Instant Messaging", cost: 50.00, reimbursable: true, statementId: "" },
+    { id: '680', merchant: "Hertz", service: "Travel", cost: 239.45, reimbursable: false, statementId: "" },
+    { id: '678', merchant: "Skype", service: "Phone", cost: 59.00, reimbursable: true, statementId: "" },
+    { id: '985', merchant: "Starbucks", service: "Food", cost: 20.45, reimbursable: false, statementId: "" },
+    { id: '222', merchant: "Amazon", service: "Supplies", cost: 39.45, reimbursable: false, statementId: "" },
+    { id: '501', merchant: "Shell", service: "Gas", cost: 49.45, reimbursable: false, statementId: "" },
   ]
 }
 
@@ -83,6 +83,9 @@ let reducer = (state, action) => {
       let newStatementSelected = state.statementSelected;
       newStatementSelected.date = action.payload;
       return { ...state, statementSelected: newStatementSelected }
+    case "updateExpense":
+      console.log('action.payload: ', action.payload);
+      return { ...state, expenses: action.payload }
     default:
       return { ...state };
   }
