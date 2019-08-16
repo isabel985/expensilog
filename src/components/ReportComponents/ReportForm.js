@@ -28,10 +28,9 @@ const ReportForm = (props) => {
       <header>
         <h1>Report Form</h1>
       </header>
-      <div className='content-wrapper report-form-header'>
+      {state.newForm ? <div className='content-wrapper report-form-header'>
         <button className='btn btn-cancel' onClick={() => { dispatch({ type: 'cancelReport' }) }}>Cancel</button>
-        <button className='btn btn-save'>Save</button>
-      </div>
+      </div> : ""}
 
       <div className='content-wrapper'>
 

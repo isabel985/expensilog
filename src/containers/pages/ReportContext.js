@@ -64,7 +64,7 @@ let reducer = (state, action) => {
       return { ...state, selectedFilters: newSelectedFilters, selectedStatements: newSelectedStatements }
 
     case "statementSelected":
-      return { ...state, formMode: true, statementSelected: statements.find((statement) => statement.id === action.payload) }
+      return { ...state, formMode: true, newForm: false, statementSelected: statements.find((statement) => statement.id === action.payload) }
     case "newReport":
       let statementSelected = {
         id: Math.floor(Math.random() * 9999999),
@@ -75,9 +75,16 @@ let reducer = (state, action) => {
         to: user.supervisor.name,
         date: null,
       }
-      return { ...state, formMode: true, statementSelected }
+      return { ...state, formMode: true, statementSelected, newForm: true }
     case "cancelReport":
-      return { ...state, formMode: false }
+      // loop over the expenses and grab the statementId that matches the statement we are in, and set the statement id to an empty string
+      let allExpenses = [...state.expenses]
+      allExpenses.forEach((expense) => {
+        if (expense.statementId === state.statementSelected.id) {
+          expense.statementId = ""
+        }
+      })
+      return { ...state, formMode: false, expenses: allExpenses }
     case "dateChange":
       // grab the statementSelected into a new var then change the value of that new var
       let newStatementSelected = state.statementSelected;
