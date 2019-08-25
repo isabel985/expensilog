@@ -9,10 +9,7 @@ const initialState = {
   selectedStatements: statements,
   statements,
   user,
-  newForm: false,
   name: null,
-  formId: null,
-  formMode: false,
   statementSelected: {},
   expenses: [
     { id: '726', merchant: "Google Services", service: "AdWords", cost: 79.50, reimbursable: true, statementId: "123" },
@@ -64,7 +61,7 @@ let reducer = (state, action) => {
       return { ...state, selectedFilters: newSelectedFilters, selectedStatements: newSelectedStatements }
 
     case "statementSelected":
-      return { ...state, formMode: true, newForm: false, statementSelected: statements.find((statement) => statement.id === action.payload) }
+      return { ...state, statementSelected: statements.find((statement) => statement.id === action.payload) }
     case "newReport":
       let statementSelected = {
         id: Math.floor(Math.random() * 9999999),
@@ -75,7 +72,7 @@ let reducer = (state, action) => {
         to: user.supervisor.name,
         date: null,
       }
-      return { ...state, formMode: true, statementSelected, newForm: true }
+      return { ...state, statementSelected }
     case "cancelReport":
       // loop over the expenses and grab the statementId that matches the statement we are in, and set the statement id to an empty string
       let allExpenses = [...state.expenses]
@@ -84,7 +81,7 @@ let reducer = (state, action) => {
           expense.statementId = ""
         }
       })
-      return { ...state, formMode: false, expenses: allExpenses }
+      return { ...state, expenses: allExpenses }
     case "dateChange":
       // grab the statementSelected into a new var then change the value of that new var
       let newStatementSelected = state.statementSelected;

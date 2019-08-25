@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import DragDrop from '../../components/ReportComponents/DragDrop';
 import Avatar from '../Avatar';
 // import { userInfo } from 'os';
@@ -6,6 +6,18 @@ import { ReportContext } from '../../containers/pages/ReportContext';
 
 const ReportForm = (props) => {
   const { state, dispatch } = useContext(ReportContext);
+
+  let reportId = props.match.params.id;
+
+  useEffect(() => {
+    // if we have an id, dispatch an action called statementSelected
+    if (reportId) {
+      dispatch({ type: "statementSelected", payload: reportId })
+    } else {
+      // dispatch an action called newReport
+      dispatch({ type: "newReport" })
+    }
+  }, [props.match.params.id])
 
   let monthOptions = props.availableMonths.map(month => <option>{month}</option>);
 

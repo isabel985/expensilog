@@ -6,6 +6,7 @@ import Inbox from './containers/pages/Inbox';
 import Reports from './containers/pages/Reports';
 import Settings from './containers/pages/Settings';
 import Grandparent from './components/Grandparent';
+import ReportForm from './components/ReportComponents/ReportForm';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <Route path="/reports" component={Reports} />
       <Route path="/settings" component={Settings} />
       <Route path="/grandparent" component={Grandparent} />
+      <Route path="/reports/add" component={ReportForm} />
+      <Route path="/reports/edit/:id" component={ReportForm} />
     </div>
   );
 }
